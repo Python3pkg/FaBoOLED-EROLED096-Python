@@ -24,13 +24,15 @@ bus = smbus.SMBus(1)
 
 ##  FaBo OLED I2C Controll class
 class EROLED096:
+
     ## Constructor
-    def __init__(self):
-        self.address = SLAVE_ADDRESS
-        self.cur_x = 120
-        self.cur_y = 7
-        self.map_x=[120, 112, 104, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16, 8, 0]
-        self.map_y=[7, 6, 5, 4, 3, 2, 1, 0]
+    #  @param [in] address EROLED096 I2C slave address default:0x3c
+    def __init__(self, address=SLAVE_ADDRESS):
+        self.address = address
+        self.cur_x   = 120
+        self.cur_y   = 7
+        self.map_x   = [120, 112, 104, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16, 8, 0]
+        self.map_y   = [7, 6, 5, 4, 3, 2, 1, 0]
 
         self.configuration()
         self.clear()
@@ -112,6 +114,7 @@ class EROLED096:
         bus.write_i2c_block_data(self.address, 0x00, data)
 
     ## Write Display Data
+    #  @param [in] value write value
     def writeData(self, value):
         self.send(value, 0x40)
 
