@@ -1,5 +1,5 @@
 # coding: utf-8
-## @package font.py
+## @package font_d
 #  This is the bit font data for the OLED sample program
 #
 #  http://fabo.io/214.html

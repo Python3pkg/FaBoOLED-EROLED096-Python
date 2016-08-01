@@ -1,6 +1,6 @@
 # coding: utf-8
-## @package FaBoOLED_EROLED096
-#  This is a library for the FaBo OLED I2C Brick.
+## @package EROLED096
+#  This is a FaBoOLED_EROLED096 library for the FaBo OLED I2C Brick.
 #
 #  http://fabo.io/214.html
 #

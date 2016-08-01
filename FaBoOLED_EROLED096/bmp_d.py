@@ -1,5 +1,5 @@
 # coding: utf-8
-## @package bitmap.py
+## @package bmp_d
 #  This is the bit map data for the OLED sample program
 #
 #  http://fabo.io/214.html
